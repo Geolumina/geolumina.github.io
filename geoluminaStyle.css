@@ -39,8 +39,8 @@ p {
   background-color: #762a83; 
   color: white;
   display: flex;
-  margin: 0;
-  padding: 0;
+  margin: 1.5rem 0;
+  padding: .7rem 1.5rem;
   width: 100vw;
 }
 
