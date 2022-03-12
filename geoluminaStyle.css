@@ -48,6 +48,7 @@ p {
   margin: 0;
   padding: 0;
 }
+
 /* buttons */
 
 .btn-geolumina {
@@ -109,4 +110,74 @@ width: 15px;
 background: #ff8300;
 margin-top: -5px;
 border-radius: 50%;
+}
+
+/* checkboxes */
+
+/* Customize container */
+.form-check {
+  display: block;
+  position: relative;
+  margin-left: 1rem;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.form-check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.form-check-input {
+  position: absolute;
+  top: .1rem;
+  left: .7rem;
+  height: 1.2rem;
+  width: 1.2rem;
+  background-color: #eee;
+  border: 0.05rem solid #58595b;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.form-check:hover input ~ .form-check-input {
+  background-color: #d9d9d9;
+}
+
+/* When the checkbox is checked, add an orange background */
+.form-check input:checked ~ .form-check-input {
+  background-color: #ffa724;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.form-check-input:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.form-check input:checked ~ .form-check-input:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Style the checkmark/indicator */
+.form-check .form-check-input:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
 }
